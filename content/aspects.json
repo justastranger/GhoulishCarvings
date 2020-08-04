@@ -1,0 +1,41 @@
+{
+  "elements": [
+    {
+      "isAspect": true,
+      "icon": "moth",
+      "id": "mottlingmarks",
+      "label": "Mottling",
+      "description": "My creation is dotted with speckles of colour, like the pinpricks of Glory-light that pierce the secrets of the Wood, or the markings on the wings that beat within.",
+      "comments": "ascension tracker for statue, moth"
+    },
+    {
+      "isAspect": true,
+      "icon": "grail",
+      "id": "gildingmarks",
+      "label": "Gilding",
+      "description": "No mortal eye shall turn away from my masterpiece as it awakens their hungers.",
+      "comments": "ascension tracker for statue, grail"
+    },
+    {
+      "isAspect": true,
+      "icon": "heart",
+      "id": "holdingmarks",
+      "label": "Holding",
+      "description": "Bark wears down with time, and magic does not remain trapped for long. Blood will stay the hands of age.",
+      "comments": "ascension tracker for statue, heart"
+    },
+    {
+      "isAspect": true,
+      "id": "statuetracker",
+      "label": "A Mellifying Tribute",
+      "comments": "Unique tracking aspect so we can check for the statue's presence via extantreqs"
+    },
+    {
+      "isAspect": true,
+      "isHidden": true,
+      "noartneeded": true,
+      "id": "uqstatue",
+      "comments": "Uniqueness Group aspect for the statues"
+    }
+  ]
+}

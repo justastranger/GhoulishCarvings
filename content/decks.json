@@ -1,0 +1,29 @@
+{
+  "decks": [
+    {
+      "id": "citysecrets",
+      "comments": "Extends citysecrets in order to make graveyards discoverable.",
+      "spec$append": [
+        "location.cemetery"
+      ],
+      "extends": [
+        "citysecrets"
+      ]
+    },
+    {
+      "id": "carvingmarks",
+      "comments": "drawn from to choose which mark we're modifying on the statue",
+      "spec": [
+        "seasongildingmark",
+        "seasonholdingmark",
+        "seasonmottlingmark"
+      ]
+    },
+    {
+      "id": "carvingmarkrandomizer",
+      "spec": [
+        "deck:carvingmarks"
+      ]
+    }
+  ]
+}

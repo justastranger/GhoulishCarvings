@@ -1,0 +1,74 @@
+ - gildingmarks
+   - icon
+ - holdingmarks
+   - icon
+ - mottlingmarks
+   - icon
+ - statuetracker
+   - description
+ 
+ - ascensioncarvinga
+   - icon
+ - ascensioncarvingb
+   - icon
+ - ascensioncarvingc
+   - icon
+ - ascensioncarvingd
+   - icon
+   
+ - find.tree
+   - label
+ - find.tree.medium
+   - label
+   - startdescription
+   - description
+ - tree.dedication
+   - label
+   - startdescription
+   - description (failure, no other desire)
+ - tree.dedication.success
+   - label
+   - startdescription
+   - description
+ - tree.dream
+   - label
+   - startdescription
+   - description
+ - tree.carve.begin
+   - label
+   - startdescription
+ - tree.carve.finish
+   - label
+   - startdescription
+   - description
+   
+   
+ - ascensioncravingcarving
+   - label
+   - startdescription
+   - description
+ - ascensioncravinggilding
+   - label
+   - startdescription
+   - description (failure)
+ - ascensioncravinggilding.success
+   - label
+   - description
+ - ascensioncravingholding
+   - label
+   - startdescription
+   - description (failure)
+ - ascensioncravingholding.success
+   - label
+   - description
+ - ascensioncravinggilding.success
+   - label
+   - description
+ - ascensioncravingmottling
+   - label
+   - startdescription
+   - description (failure)
+ - ascensioncravingmottling.success
+   - label
+   - description
+ 

@@ -1,0 +1,123 @@
+{
+  "elements": [
+    {
+      "icon": "toolknockb",
+      "id": "ascensioncarvinga",
+      "label": "Temptation: Carving",
+      "description": "My hands itch to work and make. The Tree is baren and will require potent equipment if I am to release what is contained.",
+      "comments": "needs to be empowered from here to ascend with it",
+      "uniquenessgroup": "uqstatue",
+      "aspects": {
+        "desire": 1
+      },
+      "unique": true
+    },
+    {
+      "icon": "apostlelantern.pillar2",
+      "id": "tree.first",
+      "label": "Strange Tree",
+      "description": "The tree is tall and old. It’s wide branches stretch over the grave; it’s leaves rustle in the wind; it’s shadow seems cool and inviting. It’s easy to find yourself longing for a nap.",
+      "aspects": {
+        "way": 1
+      },
+      "xtriggers": {
+        "ascend": [
+          {
+            "id": "ascensionstatuea"
+          }
+        ]
+      },
+      "unique": true
+    },
+    {
+      "id": "location.cemetary",
+      "extends": [
+        "location.cemetary"
+      ],
+      "induces": [
+        {
+          "id": "find.tree",
+          "chance": 25
+        },
+        {
+          "id": "find.tree.medium",
+          "chance": 100
+        }
+      ]
+    },
+    {
+      "icon": "toolknockb",
+      "id": "ascensioncarvingb",
+      "label": "Dedication: Carving",
+      "description": "The Statue has begun to take shape, but it is painfully slow. But every chip reveals more beauty to my eye. And the work can only be done when the moon and mood is right, and not without sacrifice.",
+      "comments": "needs to be empowered from here to ascend with it",
+      "uniquenessgroup": "uqstatue",
+      "aspects": {
+        "desire": 2
+      },
+      "slots": [
+        {
+          "id": "toolgloves",
+          "label": "Gloves",
+          "description": "To Guide Your Hands",
+          "actionId": "work",
+          "required": {
+            "tool": 1
+          }
+        },
+        {
+          "id": "toolblade",
+          "label": "Blade",
+          "description": "To Carve It",
+          "actionId": "work",
+          "required": {
+            "tool": 1
+          }
+        },
+        {
+          "id": "toolmallet",
+          "label": "Mallet",
+          "description": "To Shape It",
+          "actionId": "work",
+          "required": {
+            "tool": 1
+          }
+        }
+      ],
+      "unique": true
+    },
+    {
+      "icon": "toolknockb",
+      "id": "ascensioncarvingc",
+      "label": "Ascension: Carving",
+      "description": "I continue to carve and work upon the Statue. I carry the woodchips on me when I cannot be by the tree's side.",
+      "comments": "needs to be empowered from here to ascend with it",
+      "uniquenessgroup": "uqstatue",
+      "aspects": {
+        "desire": 3
+      },
+      "unique": true
+    },
+    {
+      "id": "seasongildingmark"
+    },
+    {
+      "id": "seasonholdingmark"
+    },
+    {
+      "id": "seasonmottlingmark"
+    },
+    {
+      "icon": "toolknockb",
+      "id": "ascensioncarvingd",
+      "label": "Ascension: Carving",
+      "description": "The Statue's face gazes upon my own. I weep and laugh and nash me teeth before it. Soon... Soon we weill be together again.",
+      "comments": "needs to be empowered from here to ascend with it",
+      "uniquenessgroup": "uqstatue",
+      "aspects": {
+        "desire": 6
+      },
+      "unique": true
+    }
+  ]
+}

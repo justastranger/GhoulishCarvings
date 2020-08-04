@@ -1,0 +1,348 @@
+{
+  "recipes": [
+    {
+      "id": "find.tree",
+      "label": "A strange tree?",
+      "actionId": "find",
+      "startdescription": "This morning, my legs lead to me a misty graveyard. It’s old and overrun with weeds, taken back by nature; but perhaps there are uses for forgotten places like this.",
+      "description": "A tall tree, looming over an unkept grave. If I stare for long, the worls of its bark seem to move, morph into half-familiar faces. Long after, my mind keeps returning those moments.",
+      "maxexecutions": 1,
+      "warmup": 15,
+      "effects": {
+        "tree.priest": "1"
+      },
+      "extantreqs": {
+        "uqstatue": "-1"
+      }
+    },
+    {
+      "id": "tree.dream",
+      "label": "a woody dream",
+      "actionId": "dream",
+      "craftable": true,
+      "maxexecutions": 1,
+      "warmup": 60,
+      "aspects": {
+        "fatiguing": 1,
+        "ascend": 1
+      },
+      "requirements": {
+        "tree.first": "1"
+      },
+      "slots": [
+        {
+          "id": "passion",
+          "label": "Passion",
+          "description": "Your Passion",
+          "required": {
+            "passion": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "find.tree.medium",
+      "label": "A strange tree?",
+      "actionId": "find",
+      "startdescription": "This morning, my legs lead to me a misty graveyard. It’s old and overrun with weeds, taken back by nature; but perhaps there are uses for forgotten places like this.",
+      "description": "A tall tree, looming over an unkept grave. If I stare for long, the worls of its bark seem to move, morph into half-familiar faces. Long after, my mind keeps returning those moments.",
+      "maxexecutions": 1,
+      "warmup": 15,
+      "effects": {
+        "tree.priest": "1"
+      },
+      "extantreqs": {
+        "ghouljob": "1",
+        "uqstatue": "-1"
+      }
+    },
+    {
+      "id": "tree.dedication",
+      "label": "Dedication: Statue",
+      "actionId": "dream",
+      "craftable": true,
+      "maxexecutions": 1,
+      "warmup": 60,
+      "requirements": {
+        "ascensionstatuea": "1"
+      },
+      "alternativerecipes": [
+        {
+          "id": "tree.dedication.success"
+        }
+      ],
+      "slots": [
+        {
+          "id": "desire",
+          "label": "Desire",
+          "description": "Your old desire, resigned",
+          "required": {
+            "uqdesire": 1
+          },
+          "greedy": true
+        }
+      ]
+    },
+    {
+      "id": "tree.dedication.success",
+      "label": "Dedicated",
+      "actionId": "dream",
+      "effects": {
+        "uqdesire": "-1"
+      },
+      "aspects": {
+        "ascend": 1
+      },
+      "requirements": {
+        "uqdesire": "1"
+      }
+    },
+    {
+      "id": "tree.carve.begin",
+      "label": "Begin the statue",
+      "actionId": "work",
+      "description": "I cannot seem to muster the insight... what do I lack?",
+      "craftable": true,
+      "warmup": 60,
+      "requirements": {
+        "toolgrailb": "1",
+        "tooledged": "1",
+        "toolforged": "1",
+        "ascensionstatueb": "1"
+      },
+      "alternativerecipes": [
+        {
+          "id": "tree.carve.finish"
+        }
+      ],
+      "slots": [
+        {
+          "id": "skill",
+          "label": "Skill",
+          "description": "Your skill as an artist",
+          "required": {
+            "passionskill": 3
+          },
+          "greedy": true
+        }
+      ]
+    },
+    {
+      "id": "tree.carve.finish",
+      "label": "A Statue",
+      "actionId": "work",
+      "warmup": 15,
+      "aspects": {
+        "ascend": 1
+      },
+      "requirements": {
+        "passionskill": "3"
+      }
+    },
+    {
+      "id": "ambition",
+      "comments": "prepend our custom ambitions to the linked recipes",
+      "extends": [
+        "ambition"
+      ]
+    },
+    {
+      "id": "ascensioncravingcarving",
+      "actionId": "craving",
+      "warmup": 15,
+      "deckeffect": {
+        "carvingmarkrandomizer": 1
+      },
+      "linked": [
+        {
+          "id": "ascensioncravinggilding"
+        },
+        {
+          "id": "ascensioncravingholding"
+        },
+        {
+          "id": "ascensioncravingmottling"
+        }
+      ]
+    },
+    {
+      "id": "ascensioncravinggilding",
+      "actionId": "craving",
+      "warmup": 15,
+      "requirements": {
+        "seasongildingmark": "1"
+      },
+      "alternativerecipes": [
+        {
+          "id": "ascensioncravingcarving.stagnate"
+        },
+        {
+          "id": "ascensioncravinggilding.success"
+        }
+      ],
+      "slots": [
+        {
+          "id": "gilding",
+          "required": {
+            "influence": 1
+          },
+          "consumes": true
+        }
+      ],
+      "mutations": [
+        {
+          "filterOnAspectId": "uqstatue",
+          "mutateAspectId": "gildingmarks",
+          "mutationLevel": -1,
+          "additive": true
+        }
+      ]
+    },
+    {
+      "id": "ascensioncravingholding",
+      "actionId": "craving",
+      "warmup": 15,
+      "requirements": {
+        "seasonholdingmark": "1"
+      },
+      "alternativerecipes": [
+        {
+          "id": "ascensioncravingcarving.stagnate"
+        },
+        {
+          "id": "ascensioncravingholding.success"
+        }
+      ],
+      "slots": [
+        {
+          "id": "holding",
+          "required": {
+            "influence": 1
+          },
+          "consumes": true
+        }
+      ],
+      "mutations": [
+        {
+          "filterOnAspectId": "uqstatue",
+          "mutateAspectId": "holdingmarks",
+          "mutationLevel": -1,
+          "additive": true
+        }
+      ]
+    },
+    {
+      "id": "ascensioncravingmottling",
+      "actionId": "craving",
+      "warmup": 15,
+      "requirements": {
+        "seasonmottlingmark": "1"
+      },
+      "alternativerecipes": [
+        {
+          "id": "ascensioncravingcarving.stagnate"
+        },
+        {
+          "id": "ascensioncravingmottling.success"
+        }
+      ],
+      "slots": [
+        {
+          "id": "mottling",
+          "required": {
+            "influence": 1
+          },
+          "consumes": true
+        }
+      ],
+      "mutations": [
+        {
+          "filterOnAspectId": "uqstatue",
+          "mutateAspectId": "mottlingmarks",
+          "additive": true
+        }
+      ]
+    },
+    {
+      "id": "ascensioncravinggilding.success",
+      "actionId": "craving",
+      "warmup": 15,
+      "requirements": {
+        "grail": "10"
+      },
+      "slots": [
+        {
+          "id": "gilding",
+          "required": {
+            "influence": 1
+          },
+          "consumes": true
+        }
+      ],
+      "mutations": [
+        {
+          "filterOnAspectId": "uqstatue",
+          "mutateAspectId": "gildingmarks",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ]
+    },
+    {
+      "id": "ascensioncravingholding.success",
+      "actionId": "craving",
+      "warmup": 15,
+      "requirements": {
+        "heart": "10"
+      },
+      "slots": [
+        {
+          "id": "holding",
+          "required": {
+            "influence": 1
+          }
+        }
+      ],
+      "mutations": [
+        {
+          "filterOnAspectId": "uqstatue",
+          "mutateAspectId": "holdingmarks",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ]
+    },
+    {
+      "id": "ascensioncravingmottling.success",
+      "actionId": "craving",
+      "warmup": 15,
+      "requirements": {
+        "moth": "10"
+      },
+      "slots": [
+        {
+          "id": "mottling",
+          "required": {
+            "influence": 1
+          }
+        }
+      ],
+      "mutations": [
+        {
+          "filterOnAspectId": "uqstatue",
+          "mutateAspectId": "mottlingmarks",
+          "mutationLevel": 1,
+          "additive": true
+        }
+      ]
+    },
+    {
+      "id": "ascensioncravingcarving.stagnate",
+      "actionId": "craving",
+      "warmup": 15,
+      "requirements": {
+        "contentment": "1"
+      }
+    }
+  ]
+}
