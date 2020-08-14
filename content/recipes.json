@@ -66,7 +66,7 @@
       "requirements": {
         "ascensionstatuea": "1"
       },
-      "alternativerecipes": [
+      "alt": [
         {
           "id": "tree.dedication.success"
         }
@@ -110,7 +110,7 @@
         "toolforged": "1",
         "ascensionstatueb": "1"
       },
-      "alternativerecipes": [
+      "alt": [
         {
           "id": "tree.carve.finish"
         }
@@ -148,9 +148,11 @@
     },
     {
       "id": "ascensioncravingcarving",
+      "label": "A drive to create",
       "actionId": "craving",
+      "startdescription": "I am driven to make, to create, to work on my great work. But my work demands my whims align with it.",
       "warmup": 15,
-      "deckeffect": {
+      "deckeffects": {
         "carvingmarkrandomizer": 1
       },
       "linked": [
@@ -172,7 +174,7 @@
       "requirements": {
         "seasongildingmark": "1"
       },
-      "alternativerecipes": [
+      "alt": [
         {
           "id": "ascensioncravingcarving.stagnate"
         },
@@ -191,9 +193,9 @@
       ],
       "mutations": [
         {
-          "filterOnAspectId": "uqstatue",
-          "mutateAspectId": "gildingmarks",
-          "mutationLevel": -1,
+          "filter": "uqstatue",
+          "mutate": "gildingmarks",
+          "level": -1,
           "additive": true
         }
       ]
@@ -205,7 +207,7 @@
       "requirements": {
         "seasonholdingmark": "1"
       },
-      "alternativerecipes": [
+      "alt": [
         {
           "id": "ascensioncravingcarving.stagnate"
         },
@@ -224,9 +226,9 @@
       ],
       "mutations": [
         {
-          "filterOnAspectId": "uqstatue",
-          "mutateAspectId": "holdingmarks",
-          "mutationLevel": -1,
+          "filter": "uqstatue",
+          "mutate": "holdingmarks",
+          "level": -1,
           "additive": true
         }
       ]
@@ -238,7 +240,7 @@
       "requirements": {
         "seasonmottlingmark": "1"
       },
-      "alternativerecipes": [
+      "alt": [
         {
           "id": "ascensioncravingcarving.stagnate"
         },
@@ -257,8 +259,8 @@
       ],
       "mutations": [
         {
-          "filterOnAspectId": "uqstatue",
-          "mutateAspectId": "mottlingmarks",
+          "filter": "uqstatue",
+          "mutate": "mottlingmarks",
           "additive": true
         }
       ]
@@ -281,9 +283,9 @@
       ],
       "mutations": [
         {
-          "filterOnAspectId": "uqstatue",
-          "mutateAspectId": "gildingmarks",
-          "mutationLevel": 1,
+          "filter": "uqstatue",
+          "mutate": "gildingmarks",
+          "level": 1,
           "additive": true
         }
       ]
@@ -305,9 +307,9 @@
       ],
       "mutations": [
         {
-          "filterOnAspectId": "uqstatue",
-          "mutateAspectId": "holdingmarks",
-          "mutationLevel": 1,
+          "filter": "uqstatue",
+          "mutate": "holdingmarks",
+          "level": 1,
           "additive": true
         }
       ]
@@ -329,9 +331,9 @@
       ],
       "mutations": [
         {
-          "filterOnAspectId": "uqstatue",
-          "mutateAspectId": "mottlingmarks",
-          "mutationLevel": 1,
+          "filter": "uqstatue",
+          "mutate": "mottlingmarks",
+          "level": 1,
           "additive": true
         }
       ]
