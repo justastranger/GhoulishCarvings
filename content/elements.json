@@ -10,6 +10,13 @@
       "aspects": {
         "desire": 1
       },
+      "xtriggers": {
+        "ascend": [
+          {
+            "id": "ascensioncarvingb"
+          }
+        ]
+      },
       "unique": true
     },
     {
@@ -31,9 +38,6 @@
     },
     {
       "id": "location.cemetary",
-      "extends": [
-        "location.cemetary"
-      ],
       "induces": [
         {
           "id": "find.tree",
@@ -84,6 +88,13 @@
           }
         }
       ],
+      "xtriggers": {
+        "ascend": [
+          {
+            "id": "ascensioncarvingc"
+          }
+        ]
+      },
       "unique": true
     },
     {
@@ -95,6 +106,13 @@
       "uniquenessgroup": "uqstatue",
       "aspects": {
         "desire": 3
+      },
+      "xtriggers": {
+        "ascend": [
+          {
+            "id": "ascensioncarvingd"
+          }
+        ]
       },
       "unique": true
     },
@@ -112,7 +130,7 @@
       "id": "ascensioncarvingd",
       "label": "Ascension: Carving",
       "description": "The Statue's face gazes upon my own. I weep and laugh and nash me teeth before it. Soon... Soon we weill be together again.",
-      "comments": "needs to be empowered from here to ascend with it",
+      "comments": "needs to be empowered in final ritual from here to ascend with it",
       "uniquenessgroup": "uqstatue",
       "aspects": {
         "desire": 6

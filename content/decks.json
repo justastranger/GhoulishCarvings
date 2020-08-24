@@ -5,9 +5,6 @@
       "comments": "Extends citysecrets in order to make graveyards discoverable.",
       "spec$append": [
         "location.cemetery"
-      ],
-      "extends": [
-        "citysecrets"
       ]
     },
     {

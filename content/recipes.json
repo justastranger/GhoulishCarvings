@@ -99,8 +99,9 @@
     },
     {
       "id": "tree.carve.begin",
-      "label": "Begin the statue",
+      "label": "A cloying carving?",
       "actionId": "work",
+      "startdescription": "The hammer, the chisel, the grip. My work begins.",
       "description": "I cannot seem to muster the insight... what do I lack?",
       "craftable": true,
       "warmup": 60,
@@ -131,6 +132,7 @@
       "id": "tree.carve.finish",
       "label": "A Statue",
       "actionId": "work",
+      "description": "I drip with sweat, and my work has only begun, but I've unveiled the Tree's truth. A face and form now stands before. More than that. It is my Statue. I love it, fear it, lust for it, and yearn for its yearning. I have always felt this way, but much like the Statue itself, it is now exposed and cannot be denied.",
       "warmup": 15,
       "aspects": {
         "ascend": 1
@@ -141,10 +143,7 @@
     },
     {
       "id": "ambition",
-      "comments": "prepend our custom ambitions to the linked recipes",
-      "extends": [
-        "ambition"
-      ]
+      "comments": "prepend our custom ambitions to the linked recipes"
     },
     {
       "id": "ascensioncravingcarving",
@@ -169,7 +168,9 @@
     },
     {
       "id": "ascensioncravinggilding",
+      "label": "The Statue demands my body",
       "actionId": "craving",
+      "description": "I gnash my teeth and am flumixed. Nothing I can do is good enough. I see how shoddy my work before was... How did I not see it. This will not do. THIS WILL NOT DO.",
       "warmup": 15,
       "requirements": {
         "seasongildingmark": "1"
@@ -202,7 +203,9 @@
     },
     {
       "id": "ascensioncravingholding",
+      "label": "The Statue demands my affection.",
       "actionId": "craving",
+      "description": "I am not enough. Bitter tears sting my eyes. The Statue's eyes look at me impassively. There is no comfort there, no matter how much I wish it.",
       "warmup": 15,
       "requirements": {
         "seasonholdingmark": "1"
@@ -235,7 +238,9 @@
     },
     {
       "id": "ascensioncravingmottling",
+      "label": "The Statue demands are varied.",
       "actionId": "craving",
+      "description": "I cannot keep up with it. What it asks changes moment to moment. I cannot understand it. I leave early, frustration knoted in my gut as the Statue stare bores hungerily at my back.",
       "warmup": 15,
       "requirements": {
         "seasonmottlingmark": "1"
@@ -267,7 +272,10 @@
     },
     {
       "id": "ascensioncravinggilding.success",
+      "label": "Gilded Wood",
       "actionId": "craving",
+      "startdescription": "The Wood bleeds Sap as I bleed upon it. The wood takes on a rich hue. I place baubles and riches upon it. I want nothing more than this Statue in this moment.",
+      "description": "When it is done, I am depleted and deflated. The wood of the statue gleams, the eyes of its face gaze upon me with disgust and lust",
       "warmup": 15,
       "requirements": {
         "grail": "10"
@@ -292,7 +300,10 @@
     },
     {
       "id": "ascensioncravingholding.success",
+      "label": "Tight Embrace",
       "actionId": "craving",
+      "startdescription": "I carve more shape and form into the statue. The work is easy when I know my chisel is guided by the statue's own will.  But I know it hurts it nonetheless, but anything coming back to life hurts.",
+      "description": "I embrace the statue. I feel the worls of it's wood and shape of its exposed body. I can feel it warm beneath my touch. A soft vibration takes the statue. If it is its own heartbeat or mine, I do not know.",
       "warmup": 15,
       "requirements": {
         "heart": "10"
@@ -316,7 +327,10 @@
     },
     {
       "id": "ascensioncravingmottling.success",
+      "label": "Mottled Needs",
       "actionId": "craving",
+      "startdescription": "I shut my eyes and let the Statue guide my hand and tools. Were there this many tools before? Why did I drentch it in water? This questions only come afterward.",
+      "description": "When I finally open my eyes once more, moths, moss, and mold has taken to the statue. It makes not sense, but it does not need to. I smile for the pleasure of having been a part of its secret.",
       "warmup": 15,
       "requirements": {
         "moth": "10"
@@ -340,10 +354,85 @@
     },
     {
       "id": "ascensioncravingcarving.stagnate",
+      "label": "Companionship",
       "actionId": "craving",
+      "startdescription": "Even if I can not satisfy the statue's demands, I can still spend time with it. I talk to it. About my day, about my life, about my dreams, about how I feel about it.",
+      "description": "The Statue's needs are mollified but I feel somewhat hollower for it. But maybe a taste of the life it once lived was enough.",
       "warmup": 15,
       "requirements": {
         "contentment": "1"
+      }
+    },
+    {
+      "id": "hint.tree.carve.begin",
+      "label": "A Cloying Carving?",
+      "actionId": "work",
+      "startdescription": "The tree is unyielding to mundane implements. I should seek out instruments touched by the arcane arts: Grail to direct my desires, Forge to give them form, Edge to carve out their scars.",
+      "hintonly": true,
+      "requirements": {
+        "ascensioncarvinga": "1"
+      }
+    },
+    {
+      "id": "majorcarvingvictory_trigger",
+      "actionId": "work",
+      "craftable": true,
+      "warmup": 1,
+      "requirements": {
+        "rite": "1",
+        "grail": "8",
+        "heart": "8",
+        "moth": "8",
+        "ascensioncarvingd": "1"
+      }
+    },
+    {
+      "id": "majorcarvingvictory_overture",
+      "actionId": "work",
+      "signalimportantloop": true,
+      "warmup": 60,
+      "linked": [
+        {
+          "id": "belovedfarewell"
+        },
+        {
+          "id": "majorcarvingvictory"
+        }
+      ],
+      "slots": [
+        {
+          "id": "beloved",
+          "label": "Beloved",
+          "required": {
+            "romanticinterest": 1
+          },
+          "forbidden": {
+            "corpse": 1,
+            "notoriety": 1
+          },
+          "greedy": true
+        }
+      ]
+    },
+    {
+      "id": "majorcarvingvictory",
+      "actionId": "work",
+      "ending": "majorcarvingvictory",
+      "requirements": {
+        "ascensioncarvingd": "1"
+      }
+    },
+    {
+      "id": "ascensioncravingcarving.final",
+      "actionId": "craving",
+      "warmup": 60,
+      "aspects": {
+        "ascend": 1
+      },
+      "requirements": {
+        "gildingmarks": "7",
+        "holdingmarks": "7",
+        "mottlingmarks": "7"
       }
     }
   ]
